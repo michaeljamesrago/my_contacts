@@ -7,4 +7,5 @@ class Contact < ApplicationRecord
     presence: true,
     length: { maximum: 255 }
   }
+  self.per_page = 10
 end

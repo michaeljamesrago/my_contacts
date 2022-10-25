@@ -8,6 +8,7 @@
   <%= link_to "Add New Category", new_category_path %>
 </p>
 <h2>Contacts</h2>
+<%= will_paginate @contacts %>
 <ul>
   <%= render @contacts %>
 </ul>

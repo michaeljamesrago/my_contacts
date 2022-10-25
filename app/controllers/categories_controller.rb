@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
-    @contacts = Contact.all
+    @contacts = Contact.paginate(page: params[:page])
   end
 
   def new
