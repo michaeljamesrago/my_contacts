@@ -5,6 +5,18 @@
 <p>
   Phone: <%= @contact.phone %>
 </p>
+<h3>Categories</h3>
+<p>
+  <% if @contact.categories.any? %>
+    <ul>
+      <% @contact.categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    This contact has not been associated with any categories yet.
+  <% end %>
+</p>
 <p>
   <%= link_to "Edit this contact", edit_contact_path(@contact) %>
 </p>
