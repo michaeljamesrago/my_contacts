@@ -1,2 +1,16 @@
-<h1>Contacts#show</h1>
-<p>Find me in app/views/contacts/show.html.erb</p>
+<h2><%= @contact.name %></h2>
+<p>
+  Email: <%= @contact.email %>
+</p>
+<p>
+  Phone: <%= @contact.phone %>
+</p>
+<p>
+  <%= link_to "Edit this contact", edit_contact_path(@contact) %>
+</p>
+<p>
+  <%= link_to "Delete this contact", @contact, data: { "turbo-method": "delete",
+                                                        "turbo-confirm": "Are you sure?" } %>
+</p>
+<%= home_link %>
+

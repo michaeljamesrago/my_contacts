@@ -1,0 +1,14 @@
+<%= form_with(model: @contact) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
