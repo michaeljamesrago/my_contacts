@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-  get 'contacts/show'
   resources :categories
   resources :contacts
+  resources :memberships, only: [:create, :destroy]
   root "categories#index"
 end

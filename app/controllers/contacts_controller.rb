@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @joinable_categories = Category.all.select { |category| !(@contact.categories.include?(category)) }
   end
 
   def edit

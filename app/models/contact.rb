@@ -15,4 +15,5 @@ class Contact < ApplicationRecord
   def join(category)
     categories << category
   end
+
 end
