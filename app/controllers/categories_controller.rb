@@ -17,6 +17,17 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @contacts = @category.members
+  end
+  
+  def contacts
+    @categories = Category.all
+    @category = Category.find(params[:id])
+    @contacts = @category.members.paginate(page: params[:page])
+  end
+
   private
     def category_params
       params.require(:category)
