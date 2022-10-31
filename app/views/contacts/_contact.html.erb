@@ -1,9 +1,7 @@
-<li>
-  <a href="<%=contact_path(contact) %>">
-    <ul>
-      <li><%= contact.name %></li>
-      <li>Email: <%= contact.email %></li>
-      <li>Phone: <%= contact.phone %></li>
-    </ul>
-  </a>
-</li>
+<a href="<%= contact_path(contact) %>">
+  <div class="<%= @contact ? "contact-active" : "contact" %>">
+    <p class="font-bold"><%= contact.name %></p>
+    <p>Email: <%= contact.email %></p>
+    <p>Phone: <%= contact.phone %></p>
+  </div>
+</a>

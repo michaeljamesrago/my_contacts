@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to root_url
+      redirect_to @contact
     else
       render 'new', status: :unprocessable_entity
     end
@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
 
   def show
     @contact = Contact.find(params[:id])
+    @categories = Category.all
     @joinable_categories = Category.all.select { |category| !(@contact.categories.include?(category)) }
   end
 

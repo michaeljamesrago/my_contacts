@@ -1,8 +1,14 @@
-<h2>Categories</h2>
-<ul>
-  <li><%= link_to "Show all contacts", root_path %></li>
+<div>
+  <a href="<%= root_path %>">
+    <div class="<%= @category ? "button" : "button-active" %> mx-3 my-2 text-sm">
+      ALL CONTACTS
+    </div>
+  </a>
   <%= render @categories %>
-</ul>
-<p>
-  <%= link_to "Add New Category", new_category_path %>
-</p>
+  <a href="<%= new_category_path %>">
+    <div class="button mx-3 my-2 text-sm">
+      NEW CATEGORY
+    </div>
+  </a>
+</div>
+

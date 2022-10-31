@@ -1,12 +1,19 @@
-<h2>Add New Category</h2>
+<div class="text-2xl p-2">Add new category</div>
 <%= form_with(model: @category) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <p>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="grid grid-cols-[100px_1fr] gap-1">
+    <div class="text-right">
+      <p class="form-label">
+        <%= f.label :name %>
+      </p>
+    </div>
+    <div>
+      <p>
+        <%= f.text_field :name %>
+      </p>
+    </div>
+  </div>
+  <div class="category-joined w-fit ml-8">
     <%= f.submit "Submit" %>
-  </p>
+  </div>
 <% end %>
-<p>
-  <%= home_link %>
-</p>
-

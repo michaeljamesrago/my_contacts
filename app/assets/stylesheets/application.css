@@ -13,3 +13,58 @@
  *= require_tree .
  *= require_self
  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .button {
+    @apply text-green-800 font-bold bg-green-100 rounded-xl p-2 text-center hover:text-green-100 hover:bg-green-800;
+  }
+  .button-active {
+    @apply text-green-100 bg-green-800 font-bold rounded-xl p-2 text-center;
+  };
+  .contact {
+    @apply bg-green-700 text-green-100 hover:bg-green-100 hover:text-green-700 p-2 m-2 rounded-xl w-full;
+  }
+  .contact-active {
+    @apply bg-green-100 text-green-700 p-2 m-2 rounded-xl w-full;
+  }
+  .category-available {
+    @apply bg-green-100 text-green-700 hover:bg-green-700 hover:text-green-100 text-center p-1 m-2 rounded-xl w-full;
+  }
+  .category-joined {
+    @apply bg-green-700 text-green-100 hover:bg-green-100 hover:text-green-700 text-center p-1 m-2 rounded-xl w-full;
+  }
+  .form-label {
+    @apply px-1.5 py-2;
+  }
+}
+
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }

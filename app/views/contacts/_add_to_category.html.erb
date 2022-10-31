@@ -1,0 +1,9 @@
+<div>
+  <%= form_with(model: @contact.memberships.build) do |form| %>
+    <%= hidden_field_tag :category_id, @category.id %>
+    <%= hidden_field_tag :contact_id, @contact.id %>
+    <div class="category-available">
+      <%= form.submit @category.name %>
+    </div>
+  <% end %>
+</div>

@@ -1,1 +1,5 @@
-<li><%= link_to category.name, contacts_category_path(category) %></li>
+<%= link_to contacts_category_path(category) do %>
+  <div class="<%= category == @category ? "button-active" : "button" %> mx-3 my-2 text-sm">
+    <%= category.name %>
+  </div>
+<% end %>

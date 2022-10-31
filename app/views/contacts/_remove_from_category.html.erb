@@ -1,0 +1,8 @@
+<div>
+  <%= form_with(model: @contact.memberships.find_by(category_id: @category.id),
+  method: "delete") do |form| %>
+    <div class="category-joined">
+      <%= form.submit @category.name %>
+    </div>
+  <% end %>
+</div>

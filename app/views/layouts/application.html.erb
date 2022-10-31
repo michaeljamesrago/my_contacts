@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
-    <header>
-      <h1>The Contacts App</h1>
-      <%= link_to "Add new contact", new_contact_path %>
-    </header>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+  <body class="bg-green-300 relative">
+    <%= render 'layouts/header' %>
+    <main class="border-b-2">
+      <%= yield %>
+    </main>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

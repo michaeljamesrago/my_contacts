@@ -1,5 +1,4 @@
-<h2>Contacts</h2>
-<%= will_paginate @contacts %>
-<ul>
+<div class="apple_pagination">
+  <%= will_paginate @contacts, container: true %>
   <%= render @contacts %>
-</ul>
+</div>
